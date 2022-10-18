@@ -9,8 +9,8 @@ namespace API.Entities
         public string Url { get; set; } = default!;
         public bool IsMain { get; set; }
         public string PublicId { get; set; } = default!;
-
         public AppUser AppUser { get; set; }
         public int AppUserId { get; set; }
+
     }
 }
