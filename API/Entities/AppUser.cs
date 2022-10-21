@@ -28,10 +28,15 @@ public class AppUser
     public ICollection<UserLike> LikedByUsers { get; private set; }
     public ICollection<UserLike> LikedUsers { get; private set; }
 
+    public ICollection<Message> MessagesSent { get; private set; }
+    public ICollection<Message> MessageReceived { get; private set; }
+
     public AppUser()
     {
         LikedByUsers = new HashSet<UserLike>();
         LikedUsers = new HashSet<UserLike>();
+        MessagesSent = new HashSet<Message>();
+        MessageReceived = new HashSet<Message>();
     }
 }
 
