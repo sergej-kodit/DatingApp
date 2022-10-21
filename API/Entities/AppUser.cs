@@ -23,13 +23,16 @@ public class AppUser
     public string? Interests { get; set; } = default!;
     public string? City { get; set; } = default!;
     public string? Country { get; set; } = default!;
-    public ICollection<Photo> Photos { get; set; }
+    public ICollection<Photo> Photos { get; set; } = default!;
 
-    // public int GetAge()
-    // {
-    //     return DateOfBirth.CalculateAge();
-    // }
+    public ICollection<UserLike> LikedByUsers { get; private set; }
+    public ICollection<UserLike> LikedUsers { get; private set; }
 
+    public AppUser()
+    {
+        LikedByUsers = new HashSet<UserLike>();
+        LikedUsers = new HashSet<UserLike>();
+    }
 }
 
 
